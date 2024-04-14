@@ -1,0 +1,21 @@
+Case,Model,Outlier Removed,Balanced Accuracy,ROC-AUC
+pre_demo,Random Forest,No,54.02,0.588
+pre_demo,Random Forest,Yes,53.9,0.584
+pre_physio,Random Forest,No,57.91,0.695
+pre_physio,Random Forest,Yes,55.24,0.682
+pre_surgi,Random Forest,No,50.12,0.666
+pre_surgi,Random Forest,Yes,50.03,0.664
+peri_physio,Random Forest,No,55.56,0.58
+peri_physio,Random Forest,Yes,55.36,0.577
+peri_surgi,Random Forest,No,63.13,0.746
+peri_surgi,Random Forest,Yes,63.57,0.735
+Pre w/o cog,Random Forest,No,62.76,0.762
+Pre w/o cog,Random Forest,Yes,61.42,0.758
+Pre+Peri w/o cog,Random Forest,No,61.72,0.797
+Pre+Peri w/o cog,Random Forest,Yes,62.49,0.777
+pre_cog,Random Forest,No,52.72,0.604
+pre_cog,Random Forest,Yes,52.84,0.613
+Pre wih cog,Random Forest,No,61.92,0.788
+Pre wih cog,Random Forest,Yes,61.85,0.788
+Pre+Peri with cog,Random Forest,No,64.89,0.814
+Pre+Peri with cog,Random Forest,Yes,64.49,0.809

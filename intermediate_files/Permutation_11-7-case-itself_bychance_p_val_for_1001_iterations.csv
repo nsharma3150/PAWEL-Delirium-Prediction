@@ -1,0 +1,8 @@
+Cases,p_value
+pre_demo,0.001998001998001998
+pre_physio,0.000999000999000999
+pre_surgi,0.000999000999000999
+peri_physio,0.001998001998001998
+peri_surgi,0.000999000999000999
+pre_demo+pre_physio+pre_surgi,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.000999000999000999

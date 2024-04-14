@@ -1,0 +1,53 @@
+
+#### * LINES *
+lines.linewidth : 1.5
+lines.markersize  : 8            ## markersize, in points
+
+#### * FONT *
+font.family : serif
+font.serif : DejaVu Serif
+font.size : 12
+
+#### * AXES *
+axes.titlesize : 14    # larger
+axes.labelsize:  12 
+axes.titlepad : 6
+axes.linewidth : 1
+axes.spines.right: False
+axes.spines.top: False
+axes.unicode_minus : True    ## use Unicode for the minus symbol rather than hyphen.
+
+#### * TICKS *
+xtick.major.width: 1
+ytick.major.width: 1
+xtick.minor.width: 0.5
+ytick.minor.width: 0.5
+xtick.major.size: 5
+ytick.major.size: 5
+xtick.minor.size: 2.5
+ytick.minor.size: 2.5
+xtick.major.pad: 3
+ytick.major.pad: 3
+xtick.top: False
+ytick.right: False
+xtick.labelsize: 10
+ytick.labelsize: 10
+
+#### * LEGEND *
+legend.fancybox : True
+legend.fontsize: 12
+legend.frameon: True  
+legend.framealpha: 1
+legend.edgecolor: 'black'
+
+#### * FIGURE *
+figure.figsize:     6.4, 4.8  # figure size in inches
+figure.dpi:         300       # figure dots per inch
+figure.facecolor   : white    ## figure facecolor
+
+#### * IMAGES *
+image.cmap   : viridis             ## A colormap name, gray etc...
+
+#### * SAVING FIGURES *
+savefig.dpi:       300      # figure dots per inch or 'figure'
+savefig.facecolor: white    ## ensure background color is white

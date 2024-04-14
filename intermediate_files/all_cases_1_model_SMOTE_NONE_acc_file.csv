@@ -1,0 +1,21 @@
+Case,Model,Oversampling,Balanced Accuracy,ROC-AUC
+pre_demo,Random Forest,None,53.27,0.592
+pre_demo,Random Forest,SMOTE,54.18,0.592
+pre_physio,Random Forest,None,57.57,0.69
+pre_physio,Random Forest,SMOTE,58.66,0.687
+pre_surgi,Random Forest,None,50.07,0.668
+pre_surgi,Random Forest,SMOTE,65.72,0.656
+peri_physio,Random Forest,None,55.28,0.58
+peri_physio,Random Forest,SMOTE,55.3,0.562
+peri_surgi,Random Forest,None,62.98,0.731
+peri_surgi,Random Forest,SMOTE,64.46,0.734
+Pre w/o cog,Random Forest,None,62.65,0.765
+Pre w/o cog,Random Forest,SMOTE,63.0,0.765
+Pre+Peri w/o cog,Random Forest,None,62.02,0.798
+Pre+Peri w/o cog,Random Forest,SMOTE,65.13,0.797
+pre_cog,Random Forest,None,53.92,0.617
+pre_cog,Random Forest,SMOTE,55.0,0.615
+Pre wih cog,Random Forest,None,62.4,0.793
+Pre wih cog,Random Forest,SMOTE,65.22,0.787
+Pre+Peri with cog,Random Forest,None,63.84,0.816
+Pre+Peri with cog,Random Forest,SMOTE,67.96,0.809

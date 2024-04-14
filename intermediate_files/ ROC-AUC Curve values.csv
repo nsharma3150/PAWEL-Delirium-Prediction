@@ -1,0 +1,6 @@
+Case,AUC ROC
+Cog,0.615
+Pre without Cog,0.759
+Pre with Cog,0.787
+Pre+Peri without Cog,0.786
+Pre+Peri+Cog,0.806

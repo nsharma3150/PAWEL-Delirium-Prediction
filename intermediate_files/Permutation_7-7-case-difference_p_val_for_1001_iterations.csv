@@ -1,0 +1,197 @@
+Cases,p_value
+pre_demo || pre_demo,1.0
+pre_demo || pre_physio,0.001998001998001998
+pre_demo || pre_surgi,0.02097902097902098
+pre_demo || peri_physio,0.7432567432567433
+pre_demo || peri_surgi,0.000999000999000999
+pre_demo || pre_demo+pre_physio+pre_surgi,0.000999000999000999
+pre_demo || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.000999000999000999
+pre_demo || pre_demo+pre_cog,0.000999000999000999
+pre_demo || pre_physio+pre_cog,0.000999000999000999
+pre_demo || pre_surgi+pre_cog,0.000999000999000999
+pre_demo || peri_physio+pre_cog,0.000999000999000999
+pre_demo || peri_surgi+pre_cog,0.000999000999000999
+pre_demo || pre_demo+pre_physio+pre_surgi+pre_cog,0.000999000999000999
+pre_demo || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.000999000999000999
+pre_physio || pre_demo,0.001998001998001998
+pre_physio || pre_physio,1.0
+pre_physio || pre_surgi,0.4045954045954046
+pre_physio || peri_physio,0.001998001998001998
+pre_physio || peri_surgi,0.0939060939060939
+pre_physio || pre_demo+pre_physio+pre_surgi,0.000999000999000999
+pre_physio || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.000999000999000999
+pre_physio || pre_demo+pre_cog,0.8271728271728271
+pre_physio || pre_physio+pre_cog,0.052947052947052944
+pre_physio || pre_surgi+pre_cog,0.06493506493506493
+pre_physio || peri_physio+pre_cog,0.27672327672327673
+pre_physio || peri_surgi+pre_cog,0.000999000999000999
+pre_physio || pre_demo+pre_physio+pre_surgi+pre_cog,0.000999000999000999
+pre_physio || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.000999000999000999
+pre_surgi || pre_demo,0.02097902097902098
+pre_surgi || pre_physio,0.4045954045954046
+pre_surgi || pre_surgi,1.0
+pre_surgi || peri_physio,0.004995004995004995
+pre_surgi || peri_surgi,0.017982017982017984
+pre_surgi || pre_demo+pre_physio+pre_surgi,0.000999000999000999
+pre_surgi || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.000999000999000999
+pre_surgi || pre_demo+pre_cog,0.3006993006993007
+pre_surgi || pre_physio+pre_cog,0.023976023976023976
+pre_surgi || pre_surgi+pre_cog,0.006993006993006993
+pre_surgi || peri_physio+pre_cog,0.059940059940059943
+pre_surgi || peri_surgi+pre_cog,0.000999000999000999
+pre_surgi || pre_demo+pre_physio+pre_surgi+pre_cog,0.000999000999000999
+pre_surgi || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.000999000999000999
+peri_physio || pre_demo,0.7432567432567433
+peri_physio || pre_physio,0.001998001998001998
+peri_physio || pre_surgi,0.004995004995004995
+peri_physio || peri_physio,1.0
+peri_physio || peri_surgi,0.000999000999000999
+peri_physio || pre_demo+pre_physio+pre_surgi,0.000999000999000999
+peri_physio || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.000999000999000999
+peri_physio || pre_demo+pre_cog,0.000999000999000999
+peri_physio || pre_physio+pre_cog,0.000999000999000999
+peri_physio || pre_surgi+pre_cog,0.000999000999000999
+peri_physio || peri_physio+pre_cog,0.000999000999000999
+peri_physio || peri_surgi+pre_cog,0.000999000999000999
+peri_physio || pre_demo+pre_physio+pre_surgi+pre_cog,0.000999000999000999
+peri_physio || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.000999000999000999
+peri_surgi || pre_demo,0.000999000999000999
+peri_surgi || pre_physio,0.0939060939060939
+peri_surgi || pre_surgi,0.017982017982017984
+peri_surgi || peri_physio,0.000999000999000999
+peri_surgi || peri_surgi,1.0
+peri_surgi || pre_demo+pre_physio+pre_surgi,0.4195804195804196
+peri_surgi || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.017982017982017984
+peri_surgi || pre_demo+pre_cog,0.12687312687312688
+peri_surgi || pre_physio+pre_cog,0.7922077922077922
+peri_surgi || pre_surgi+pre_cog,0.9100899100899101
+peri_surgi || peri_physio+pre_cog,0.5654345654345654
+peri_surgi || peri_surgi+pre_cog,0.022977022977022976
+peri_surgi || pre_demo+pre_physio+pre_surgi+pre_cog,0.13186813186813187
+peri_surgi || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.00999000999000999
+pre_demo+pre_physio+pre_surgi || pre_demo,0.000999000999000999
+pre_demo+pre_physio+pre_surgi || pre_physio,0.000999000999000999
+pre_demo+pre_physio+pre_surgi || pre_surgi,0.000999000999000999
+pre_demo+pre_physio+pre_surgi || peri_physio,0.000999000999000999
+pre_demo+pre_physio+pre_surgi || peri_surgi,0.4195804195804196
+pre_demo+pre_physio+pre_surgi || pre_demo+pre_physio+pre_surgi,1.0
+pre_demo+pre_physio+pre_surgi || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.12087912087912088
+pre_demo+pre_physio+pre_surgi || pre_demo+pre_cog,0.008991008991008992
+pre_demo+pre_physio+pre_surgi || pre_physio+pre_cog,0.14585414585414586
+pre_demo+pre_physio+pre_surgi || pre_surgi+pre_cog,0.4775224775224775
+pre_demo+pre_physio+pre_surgi || peri_physio+pre_cog,0.15584415584415584
+pre_demo+pre_physio+pre_surgi || peri_surgi+pre_cog,0.3246753246753247
+pre_demo+pre_physio+pre_surgi || pre_demo+pre_physio+pre_surgi+pre_cog,0.32367632367632365
+pre_demo+pre_physio+pre_surgi || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.04395604395604396
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_demo,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_physio,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_surgi,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || peri_physio,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || peri_surgi,0.017982017982017984
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_demo+pre_physio+pre_surgi,0.12087912087912088
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,1.0
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_demo+pre_cog,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_physio+pre_cog,0.012987012987012988
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_surgi+pre_cog,0.07492507492507493
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || peri_physio+pre_cog,0.01098901098901099
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || peri_surgi+pre_cog,0.9180819180819181
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_demo+pre_physio+pre_surgi+pre_cog,0.6383616383616384
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.44455544455544455
+pre_demo+pre_cog || pre_demo,0.000999000999000999
+pre_demo+pre_cog || pre_physio,0.8271728271728271
+pre_demo+pre_cog || pre_surgi,0.3006993006993007
+pre_demo+pre_cog || peri_physio,0.000999000999000999
+pre_demo+pre_cog || peri_surgi,0.12687312687312688
+pre_demo+pre_cog || pre_demo+pre_physio+pre_surgi,0.008991008991008992
+pre_demo+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.000999000999000999
+pre_demo+pre_cog || pre_demo+pre_cog,1.0
+pre_demo+pre_cog || pre_physio+pre_cog,0.10989010989010989
+pre_demo+pre_cog || pre_surgi+pre_cog,0.02197802197802198
+pre_demo+pre_cog || peri_physio+pre_cog,0.1958041958041958
+pre_demo+pre_cog || peri_surgi+pre_cog,0.000999000999000999
+pre_demo+pre_cog || pre_demo+pre_physio+pre_surgi+pre_cog,0.000999000999000999
+pre_demo+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.000999000999000999
+pre_physio+pre_cog || pre_demo,0.000999000999000999
+pre_physio+pre_cog || pre_physio,0.052947052947052944
+pre_physio+pre_cog || pre_surgi,0.023976023976023976
+pre_physio+pre_cog || peri_physio,0.000999000999000999
+pre_physio+pre_cog || peri_surgi,0.7922077922077922
+pre_physio+pre_cog || pre_demo+pre_physio+pre_surgi,0.14585414585414586
+pre_physio+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.012987012987012988
+pre_physio+pre_cog || pre_demo+pre_cog,0.10989010989010989
+pre_physio+pre_cog || pre_physio+pre_cog,1.0
+pre_physio+pre_cog || pre_surgi+pre_cog,0.5804195804195804
+pre_physio+pre_cog || peri_physio+pre_cog,0.7082917082917083
+pre_physio+pre_cog || peri_surgi+pre_cog,0.01098901098901099
+pre_physio+pre_cog || pre_demo+pre_physio+pre_surgi+pre_cog,0.005994005994005994
+pre_physio+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.000999000999000999
+pre_surgi+pre_cog || pre_demo,0.000999000999000999
+pre_surgi+pre_cog || pre_physio,0.06493506493506493
+pre_surgi+pre_cog || pre_surgi,0.006993006993006993
+pre_surgi+pre_cog || peri_physio,0.000999000999000999
+pre_surgi+pre_cog || peri_surgi,0.9100899100899101
+pre_surgi+pre_cog || pre_demo+pre_physio+pre_surgi,0.4775224775224775
+pre_surgi+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.07492507492507493
+pre_surgi+pre_cog || pre_demo+pre_cog,0.02197802197802198
+pre_surgi+pre_cog || pre_physio+pre_cog,0.5804195804195804
+pre_surgi+pre_cog || pre_surgi+pre_cog,1.0
+pre_surgi+pre_cog || peri_physio+pre_cog,0.27672327672327673
+pre_surgi+pre_cog || peri_surgi+pre_cog,0.04495504495504495
+pre_surgi+pre_cog || pre_demo+pre_physio+pre_surgi+pre_cog,0.07192807192807193
+pre_surgi+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.008991008991008992
+peri_physio+pre_cog || pre_demo,0.000999000999000999
+peri_physio+pre_cog || pre_physio,0.27672327672327673
+peri_physio+pre_cog || pre_surgi,0.059940059940059943
+peri_physio+pre_cog || peri_physio,0.000999000999000999
+peri_physio+pre_cog || peri_surgi,0.5654345654345654
+peri_physio+pre_cog || pre_demo+pre_physio+pre_surgi,0.15584415584415584
+peri_physio+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.01098901098901099
+peri_physio+pre_cog || pre_demo+pre_cog,0.1958041958041958
+peri_physio+pre_cog || pre_physio+pre_cog,0.7082917082917083
+peri_physio+pre_cog || pre_surgi+pre_cog,0.27672327672327673
+peri_physio+pre_cog || peri_physio+pre_cog,1.0
+peri_physio+pre_cog || peri_surgi+pre_cog,0.002997002997002997
+peri_physio+pre_cog || pre_demo+pre_physio+pre_surgi+pre_cog,0.013986013986013986
+peri_physio+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.003996003996003996
+peri_surgi+pre_cog || pre_demo,0.000999000999000999
+peri_surgi+pre_cog || pre_physio,0.000999000999000999
+peri_surgi+pre_cog || pre_surgi,0.000999000999000999
+peri_surgi+pre_cog || peri_physio,0.000999000999000999
+peri_surgi+pre_cog || peri_surgi,0.022977022977022976
+peri_surgi+pre_cog || pre_demo+pre_physio+pre_surgi,0.3246753246753247
+peri_surgi+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.9180819180819181
+peri_surgi+pre_cog || pre_demo+pre_cog,0.000999000999000999
+peri_surgi+pre_cog || pre_physio+pre_cog,0.01098901098901099
+peri_surgi+pre_cog || pre_surgi+pre_cog,0.04495504495504495
+peri_surgi+pre_cog || peri_physio+pre_cog,0.002997002997002997
+peri_surgi+pre_cog || peri_surgi+pre_cog,1.0
+peri_surgi+pre_cog || pre_demo+pre_physio+pre_surgi+pre_cog,0.7522477522477522
+peri_surgi+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.3886113886113886
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_demo,0.000999000999000999
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_physio,0.000999000999000999
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_surgi,0.000999000999000999
+pre_demo+pre_physio+pre_surgi+pre_cog || peri_physio,0.000999000999000999
+pre_demo+pre_physio+pre_surgi+pre_cog || peri_surgi,0.13186813186813187
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_demo+pre_physio+pre_surgi,0.32367632367632365
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.6383616383616384
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_demo+pre_cog,0.000999000999000999
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_physio+pre_cog,0.005994005994005994
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_surgi+pre_cog,0.07192807192807193
+pre_demo+pre_physio+pre_surgi+pre_cog || peri_physio+pre_cog,0.013986013986013986
+pre_demo+pre_physio+pre_surgi+pre_cog || peri_surgi+pre_cog,0.7522477522477522
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_demo+pre_physio+pre_surgi+pre_cog,1.0
+pre_demo+pre_physio+pre_surgi+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,0.1928071928071928
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_demo,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_physio,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_surgi,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || peri_physio,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || peri_surgi,0.00999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_demo+pre_physio+pre_surgi,0.04395604395604396
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi,0.44455544455544455
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_demo+pre_cog,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_physio+pre_cog,0.000999000999000999
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_surgi+pre_cog,0.008991008991008992
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || peri_physio+pre_cog,0.003996003996003996
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || peri_surgi+pre_cog,0.3886113886113886
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_demo+pre_physio+pre_surgi+pre_cog,0.1928071928071928
+pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog || pre_demo+pre_physio+pre_surgi + peri_physio+peri_surgi+pre_cog,1.0
