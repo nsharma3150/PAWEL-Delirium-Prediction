@@ -12,6 +12,13 @@ import time
 from sklearn.metrics import roc_curve, auc
 from sklearn.metrics import roc_auc_score,accuracy_score,balanced_accuracy_score, roc_curve
 from sklearn.model_selection import StratifiedKFold, LeaveOneOut
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from xgboost import XGBClassifier
+import os
+from utils import change_names
+
 
 
 def evaluation_per_class(y, pred_y):
@@ -232,3 +239,78 @@ def ns_ML_model_test(model_list,model_list1,X,Y,cv_fold=10,apply_SMOTE=False,fea
     all_sites_target_frame= all_sites_target_frame.reset_index(drop=True)
     
     return feature_imp, feature_all_frame,all_sites_target_frame,Y_test_list,Y_pred_test_list
+
+# Update: Linear Classifier Importance Function
+
+def linear_classifier_importance(X, Y, feature_frame,feat_name_here, encod_col, classifier='Logistic Regression', n_splits=5, random_state=0, save_folder=None, file_name=None):
+    
+    # Initialize variables
+    coefficients = []
+    feat_names1 = list(X.columns)
+    # Cross-validation
+    skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=random_state)
+    
+    for train_index, test_index in skf.split(X, Y):
+        X_train, X_test = X.iloc[train_index,:].values, X.iloc[test_index,:].values
+        Y_train, Y_test = Y.iloc[train_index].values, Y.iloc[test_index].values
+        
+        # Standardize features
+        scaler = StandardScaler()
+        X_train = scaler.fit_transform(X_train)
+        X_test = scaler.transform(X_test)
+        
+        # Train classifier
+        if classifier == 'Logistic Regression':
+            clf = LogisticRegression(C=1,max_iter=1000000,n_jobs=-1)
+        elif classifier == 'Linear SVC':
+            clf = SVC(C=1, kernel='linear',probability=True)
+        else:
+            raise ValueError("Classifier must be either 'Logistic Regression' or 'Linear SVC'")
+        
+        clf.fit(X_train, Y_train)
+        
+        # Store coefficients
+        coefficients.append(clf.coef_[0])
+    print('Coefficients Shape:',clf.coef_.shape)
+
+    # Calculate mean absolute coefficients
+    mean_coef = np.mean(np.abs(coefficients), axis=0)
+    
+    # Create DataFrame with feature importances
+    importance_df = pd.DataFrame({
+        'Features': feat_names1,
+        'Importance': mean_coef
+    })
+    
+    # Sort by importance
+    importance_df = importance_df.sort_values('Importance', ascending=False)
+    
+    # Deal with hot-encoded features
+    to_code = list(set(feat_name_here).intersection(set(encod_col)))
+    if len(to_code) != 0:
+        new_importance = []
+        new_features = []
+        for col_name1 in to_code:
+            cols_for_col = [col for col in X.columns if col_name1 in col]
+            new_features.append(col_name1)
+            new_importance.append(np.sum(importance_df[importance_df['Features'].isin(cols_for_col)]['Importance'].values))
+        
+        # Remove the original hot-encoded features
+        importance_df = importance_df[~importance_df['Features'].isin([col for col_name1 in to_code for col in X.columns if col_name1 in col])]
+        
+        # Add the summed hot-encoded features
+        importance_df = pd.concat([importance_df, pd.DataFrame({'Features': new_features, 'Importance': new_importance})], ignore_index=True)
+    
+    # Sort again after handling hot-encoded features
+    importance_df = importance_df.sort_values('Importance', ascending=False)
+    
+    # Change feature names back using the change_names function
+    importance_df['Features'] = change_names(importance_df['Features'].values, 'Name_bar1', feature_frame)
+    importance_df = importance_df.reset_index(drop=True)
+
+    # Save to CSV
+    if save_folder is not None and file_name is not None:
+        importance_df.to_csv(os.path.join(save_folder, classifier + '_' + file_name), index=False)
+    
+    return importance_df
+
