@@ -28,9 +28,9 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import cross_val_predict
 from sklearn.metrics import roc_curve, auc
 from sklearn.metrics import precision_recall_curve
+import matplotlib.ticker as ticker
 
 plt.rcParams["font.family"] = "Arial" 
-
 
 
 def confidence_plot(dataframe, model_list1,image_str,var_list, image_folder):
@@ -908,3 +908,45 @@ def multi_bar_plot(color_list,image_folder, names, modi_frame, color_map, img_st
     plt.tight_layout()
     plt.savefig(os.path.join(image_folder, img_str + ' multi bar plot - Supplementary' + '.png'), dpi=300)
 
+
+# Update: Plotting the feature importance for linear classifiers
+def plot_linear_classifier_importance(importance_df, classifier, image_folder, file_name, top_n=15, axs=None, use_hue=False):
+    if axs is None:
+        fig, ax = plt.subplots(figsize=(8,6))
+    else:
+        ax = axs
+    
+    sns.set(style="whitegrid", font="Arial")
+    
+    data = importance_df.head(top_n)
+    if use_hue:
+        sns.barplot(data=data, y='Features', x='Importance', hue=data.columns[2], ax=ax, palette=['steelblue', 'orange'], width=0.5, capsize=0.05, orient='h')
+    else:
+        sns.barplot(data=data, y='Features', x='Importance', ax=ax, color='steelblue', width=0.5, capsize=0.05, orient='h')
+    
+    if axs is None:
+        ax.set_title(f'Top {top_n} Features - {classifier}', fontsize=16)
+    
+    ax.tick_params(axis='y', labelsize=9)
+    
+    ax.set_ylabel('Features', labelpad=5, fontdict={'size': 12})
+    ax.set_xlabel('Mean (|Coefficient|)', labelpad=5, fontdict={'size': 12})
+    
+    if use_hue:
+        ax.legend(loc='lower right', borderaxespad=0, title=data.columns[2])
+    
+    ax.set_yticklabels(ax.get_yticklabels(), rotation=0)
+    ax.grid(axis='x', color='lightgray', linestyle='--')
+    ax.set_axisbelow(True)
+    
+    # Use scientific notation for x-axis if values are small
+    if data['Importance'].max() < 0.01:
+        ax.xaxis.set_major_formatter(ticker.ScalarFormatter(useMathText=True))
+        ax.ticklabel_format(style='sci', axis='x', scilimits=(0,0))
+
+    if axs is None:
+        plt.tight_layout()
+        plt.savefig(os.path.join(image_folder, f'{file_name}_{classifier.replace(" ", "_")}_Feature_Importance.png'), dpi=300)
+        plt.show()
+    
+    return ax
